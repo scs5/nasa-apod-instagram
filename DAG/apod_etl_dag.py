@@ -22,7 +22,7 @@ IG_PASSWORD = Variable.get('IG_PASSWORD')
 # Schedule settings
 default_args = {
     'owner': 'airflow',
-    'start_date': datetime(2024, 4, 1, 0, 15),
+    'start_date': datetime(2024, 4, 4, 0, 15),
     'retries': 1,
 }
 
