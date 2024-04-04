@@ -22,7 +22,7 @@ IG_PASSWORD = Variable.get('IG_PASSWORD')
 # Schedule settings
 default_args = {
     'owner': 'airflow',
-    'start_date': datetime(2024, 4, 1, 0, 15),
+    'start_date': datetime(2024, 4, 1, 4, 15),
     'retries': 1,
 }
 
@@ -30,7 +30,7 @@ default_args = {
 dag = DAG(
     'nasa_apod_dag',
     default_args=default_args,
-    description='Download APOD data and upload to S3',
+    description='Download APOD data and post to Instagram',
     schedule_interval='@daily',
 )
 
