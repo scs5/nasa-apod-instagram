@@ -1,7 +1,7 @@
 # Astrobot
 <img src="./images/banner.jpg" width="1250" />
 
-## [Account (@astropyx)](https://www.instagram.com/astropyx/)
+## [Instagram (@astropyx)](https://www.instagram.com/astropyx/)
 
 Posts every day at 12:15am EST
 
