@@ -3,7 +3,7 @@
 
 ## [Instagram (@astropyx)](https://www.instagram.com/astropyx/)
 
-Posts every day at 10am EST
+Posts every day at 8am EST
 
 ## Tools Used
 Apache Airflow, AWS (S3, EC2), NASA API, Instagram API
