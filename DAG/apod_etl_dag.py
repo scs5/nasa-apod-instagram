@@ -22,7 +22,7 @@ IG_PASSWORD = Variable.get('IG_PASSWORD')
 # Schedule settings
 default_args = {
     'owner': 'airflow',
-    'start_date': datetime(2024, 4, 1, 14, 0),
+    'start_date': datetime(2024, 4, 1, 12, 0),
     'retries': 1,
 }
 
@@ -31,7 +31,7 @@ dag = DAG(
     'nasa_apod_dag',
     default_args=default_args,
     description='Download APOD data and post to Instagram',
-    schedule_interval='0 14 * * *',
+    schedule_interval='0 12 * * *',
 )
 
 
@@ -60,7 +60,7 @@ def transform_apod_data(**kwargs):
     apod_data = kwargs['ti'].xcom_pull(task_ids='get_apod_data', key='apod_data')
 
     # Save and encode image
-    img_data = requests.get(apod_data['hdurl']).content
+    img_data = requests.get(apod_data['url']).content
     img_data_base64 = base64.b64encode(img_data).decode('utf-8')
     
     # Save metadata
