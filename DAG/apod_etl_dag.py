@@ -32,6 +32,7 @@ dag = DAG(
     default_args=default_args,
     description='Download APOD data and post to Instagram',
     schedule_interval='0 12 * * *',
+    catchup=False,
 )
 
 
