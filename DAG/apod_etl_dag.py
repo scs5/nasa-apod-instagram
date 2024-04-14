@@ -60,8 +60,12 @@ def transform_apod_data(**kwargs):
     # Read json data
     apod_data = kwargs['ti'].xcom_pull(task_ids='get_apod_data', key='apod_data')
 
-    # Save and encode image
-    img_data = requests.get(apod_data['url']).content
+    # Save and encode image (in HD if it exists)
+    if 'hdurl' in apod_data:
+        img_url = apod_data['hdurl']
+    else:
+        img_url = apod_data['url']
+    img_data = requests.get(img_url).content
     img_data_base64 = base64.b64encode(img_data).decode('utf-8')
     
     # Save metadata
