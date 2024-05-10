@@ -3,7 +3,8 @@
 
 ## [Instagram (@astropyx)](https://www.instagram.com/astropyx/)
 
-Posts every day at 8am EST
+:warning:**Account in no longer active**:warning:<br>
+(I accomplished my goal and didn't want to continue to pay for the EC2 instance.)
 
 ## Tools Used
 Apache Airflow, AWS (S3, EC2), NASA API, Instagram API
